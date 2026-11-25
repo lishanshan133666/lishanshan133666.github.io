@@ -83,6 +83,15 @@ h1 em {font-weight:400}
 .project::after {content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#10282df5 0%,#10282ddd 24%,#10282d44 76%)}
 .project h3 {font:normal clamp(1.45rem,2.4vw,1.92rem)/1.2 var(--serif);letter-spacing:-.025em}
 .project .description {font-size:.88rem;margin:4px 0 12px}
+.repo-card {border:1px solid var(--line);border-top:3px solid #567675;background:#fffdf7;margin-bottom:14px;padding:20px 24px}
+.repo-card h3 {font:normal clamp(1.25rem,2vw,1.55rem)/1.35 var(--serif)}
+.repo-card h3 a {display:flex;gap:10px;flex-wrap:wrap;align-items:baseline;text-decoration:none;overflow-wrap:anywhere}
+.repo-card h3 a:hover {color:var(--accent);text-decoration:underline}
+.repo-card .repo-zh {font:600 .84rem/1.5 var(--sans);color:var(--muted)}
+.out {color:var(--accent);margin-left:auto;font-size:1.1rem}
+.repo-card p {font-size:.92rem;line-height:1.65;margin-top:10px}
+.repo-card .repo-en {font:normal .94rem/1.5 var(--serif);color:var(--muted);margin-top:6px}
+.repos-link {display:inline-block;margin-top:12px;color:var(--accent);font-size:.83rem}
 .watch {border-bottom:1px solid #b9ccbf;font-size:.82rem;font-weight:650}
 .project:hover .watch {border-color:white}
 .footer {border-top:1px solid var(--line);padding:19px 0 28px;justify-content:space-between;gap:16px;color:var(--muted);font-size:.8rem}
@@ -175,11 +184,17 @@ h1 em {font-weight:400}
     </section>
     <section id="projects" aria-labelledby="project-title">
       <div class="section-head"><h2 id="project-title" lang="en">Projects</h2><span class="cn">实践项目</span></div>
+      <article class="repo-card" aria-labelledby="posture-title">
+        <h3 id="posture-title"><a href="https://github.com/lishanshan133666/batesposture-cn"><span lang="en">batesposture-cn</span> <span class="repo-zh">中文坐姿提醒</span><span class="out" aria-hidden="true">↗</span></a></h3>
+        <p>基于 BatesPosture 的 Windows 适配与中文化版本。它通过摄像头实时评估坐姿，在评分低于设定阈值时弹出中文提醒。</p>
+        <p class="repo-en" lang="en">A Windows adaptation of BatesPosture with a Chinese interface, webcam-based posture scoring and desktop alerts.</p>
+      </article>
       <a class="project" href="https://www.bilibili.com/video/BV1W1w6eHERL/">
         <h3 lang="en">Global Game Jam 2025</h3>
         <p class="description">杭州站参赛作品《社畜笑传之戳戳 Bubble》</p>
         <span class="watch"><span lang="en">Watch on Bilibili</span> · 观看作品视频 ↗</span>
       </a>
+      <a class="repos-link" href="https://github.com/lishanshan133666?tab=repositories"><span lang="en">All repositories</span> · 全部公开仓库 ↗</a>
     </section>
   </div>
 </main>
